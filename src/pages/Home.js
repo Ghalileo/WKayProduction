@@ -23,15 +23,8 @@ import {
 
     return (
         <>
-        <Hero backgroundImage="https://images.unsplash.com/photo-1602526213012-e8bfd0f21501?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1891&q=80"></Hero>
-            <Container>
-                
-                <Row>
-                    <h1>WKay Production</h1>
-                    <h1>Let Us Capture your best moments always</h1>
-                    
-                </Row>
-            </Container>
+        <Hero backgroundImage="https://images.unsplash.com/photo-1602526213012-e8bfd0f21501?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1891&q=80"> <h1>Wkay Production</h1></Hero>
+        <h1>Let Us Capture your best moments always</h1>
             
         </>
       );

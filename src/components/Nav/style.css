@@ -1,0 +1,29 @@
+#Navv {
+    color: aqua;
+    background-color: rgb(1, 1, 8);
+    opacity: 100%;
+    
+}
+#homeBtn
+{color: indigo;
+border-style: inset;
+}
+#homeBtn:hover{
+    color: navy;
+}
+#aboutBtn {
+    color: indigo;
+    border-style: inset;
+    float: left;
+}
+#aboutBtn:hover {
+    color: red;
+}
+#albumsBtn {
+    color: indigo;
+    border-style: inset;
+}
+#albumsBtn:hover {
+    color: lightseagreen;
+    
+}

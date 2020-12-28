@@ -1,6 +1,18 @@
-.contain{
-    background-image: url(https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@import '~antd/dist/antd.css';
+
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
 }
+
+.site-layout-sub-header-background {
+  background: #fff;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+  [data-theme="dark"] .site-layout-sub-header-background {
+    background: #141414;
+  }

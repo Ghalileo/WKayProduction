@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css'
 import {
   Collapse,
   Navbar,
@@ -21,16 +22,16 @@ const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Home</NavbarBrand>
+      <Navbar  light expand="md" id="Navv">
+        <NavbarBrand href="/" id="homeBtn">Home</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/../../pages/About/">About</NavLink>
+              <NavLink href="/../../pages/About/" id="aboutBtn">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/../../pages/Albums/">Albums</NavLink>
+              <NavLink href="/../../pages/Albums/"id="albumsBtn">Albums</NavLink>
             </NavItem>
         
           </Nav>

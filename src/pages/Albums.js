@@ -1,139 +1,123 @@
-import React from 'react';
-import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button,  Container, Row, Col, UncontrolledCarousel  } from 'reactstrap';
-import img1 from "../assets/Aijha/DSC_4035_sepfreq.jpg";
-import img2 from "../assets/Aijha/DSC_4410_sepfreq_2.jpg";
-import img3 from "../assets/Aijha/DSC_4430_sepfreq_levels_color_1.jpg";
-import img4 from "../assets/Aria jpeg/DSC_2366.jpg";
-import img5 from "../assets/Aria jpeg/DSC_2406.jpg";
-import img6 from "../assets/Aria jpeg/DSC_2432.jpg";
-import img7 from "../assets/Nani Black and White Outfit/DSC_3403 removing the hand.jpg";
-import img8 from "../assets/Nani Black and White Outfit/DSC_3378.jpg";
-import img9 from "../assets/Nani Black and White Outfit/DSC_33302.jpg";
-import img10 from "../assets/Ruth/Ruth_0001.jpg";
-import img11 from "../assets/Ruth/Ruth_0003.jpg";
-import img12 from "../assets/Ruth/Ruth_0011.jpg";
+import React, { useState } from 'react';
+import './albums.css'
+import {  Layout, Menu, Breadcrumb, Card, Image  } from 'antd';
+import {
+   Button, CardImg, CardTitle, CardText, CardGroup,
+  CardSubtitle, CardBody, Container, Row, Col
+} from 'reactstrap';
+// import ActionButton from 'antd/lib/modal/ActionButton';
+// import ReactBnbGallery from 'react-bnb-gallery';
+import { Transition, Spring } from 'react-spring/renderprops';
+import 'react-bnb-gallery/dist/style.css';
+// import Gallery from 'react-grid-gallery';
+import { createFromIconfontCN } from '@ant-design/icons';
+// Images for Viewing
+import Ruth1 from "../assets/Ruth/Ruth01.jpg";
+import Aijha1 from "../assets/Aijha/Aijha1.jpg";
+import Aria11 from "../assets/Aria/Aria11.jpg";
+import Nani4 from "../assets/Nani/Nani4.jpg";
 
+
+
+
+// Page Icons
+const IconFont = createFromIconfontCN({
+  scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
+});
 
 
 const Albums = () => {
-    const Aijha = [
-        {
-          src: img1,
-          altText: 'Slide 1',
-          caption: 'Aijha',
-          header: 'Slide 1 Header',
-          key: '1'
-        },
-        {
-          src: img2,
-          altText: 'Slide 2',
-          caption: 'Aijha',
-          header: 'Slide 2 Header',
-          key: '2'
-        },
-        {
-          src: img3,
-          altText: 'Slide 3',
-          caption: 'Aijha',
-          header: 'Slide 3 Header',
-          key: '3'
-        }
-      ];
-      const Aria = [
-        {
-            src: img4,
-            altText: 'Slide 1',
-            caption: 'Aria',
-            header: 'Slide 1 Header',
-            key: '1'
-          },
-          {
-            src: img5,
-            altText: 'Slide 2',
-            caption: 'Aria',
-            header: 'Slide 2 Header',
-            key: '2'
-          },
-          {
-            src: img6,
-            altText: 'Slide 3',
-            caption: 'Aria',
-            header: 'Slide 3 Header',
-            key: '3'
-          }
-    ];
-    const Nani = [
-        {
-            src: img7,
-            altText: 'Slide 1',
-            caption: 'Nani',
-            header: 'Slide 1 Header',
-            key: '1'
-          },
-          {
-            src: img8,
-            altText: 'Slide 2',
-            caption: 'Nani',
-            header: 'Slide 2 Header',
-            key: '2'
-          },
-          {
-            src: img9,
-            altText: 'Slide 3',
-            caption: 'Nani',
-            header: 'Slide 3 Header',
-            key: '3'
-          }
-    ];
-    const Ruth = [
-        {
-            src: img10,
-            altText: 'Slide 1',
-            caption: '',
-            header: '',
-            key: '1'
-          },
-          {
-            src: img11,
-            altText: 'Slide 2',
-            caption: 'Ruth',
-            header: 'Slide 2 Header',
-            key: '2'
-          },
-          {
-            src: img12,
-            altText: 'Slide 3',
-            caption: 'Ruth',
-            header: 'Slide 3 Header',
-            key: '3'
-          }
-    ];
+    const { Header, Content, Footer } = Layout;
+    const [isOpen, setIsOpen] = useState(false);
+return(
+  <Layout className="layout">
+    <Header>
+      <div className="logo" />
+      <Menu className="newNavMenu" theme="dark" mode="horizontal" defaultSelectedKeys={['3']}>
+        <Menu.Item className="navTab" key="1"><a href="/">Home</a></Menu.Item>
+        <Menu.Item className="navTab" key="2"><a href="/pages/About">About</a></Menu.Item>
+        <Menu.Item className="navTab" key="3"><a href="/pages/Albums">Albums</a></Menu.Item>
+        
+      </Menu>
+    </Header>
+    <br/>
+    <h2 className="site-layout-content siteTitle">Albums</h2>
+    <br/>
+    <Content style={{ padding: '0 50px' }}>
     
-    
-      return (
-          <>
-        <div>
-            <h1>Albums</h1>
-            <Container>
-                <Row xs="4">
-                    <Col>
-                        <UncontrolledCarousel items={Aijha}/>
-                    </Col>
-                    <Col>
-                        <UncontrolledCarousel items={Aria}/>
-                    </Col>
-                    <Col>
-                        <UncontrolledCarousel items={Nani}/>
-                    </Col>
-                    <Col>
-                        <UncontrolledCarousel items={Ruth}/>
-                    </Col>
-                </Row>
-                
-            </Container>
+    <br/>
+    {/* <Card className="basicCard" style={{ width: 300 }}>
+      <img className="displayImages" src={Aijha1}/>
+      <p>A Look into the beauty of a queen</p>
+      <button><a href="/pages/photoAlbums/Aijha">View Album</a></button>
+    </Card> */}
+
+    <Spring 
+    from={{opacity:0, marginBottom: 500}}
+    to={{opacity:1, marginBottom:0}}
+    config={{delay: 1000, duration:1500}}>
+      
+      { props => (
+        <div style={props}>
+
         </div>
-        </>
-      );
+      )}
+    </Spring>
+    <Row>
+        <Col xs="6" sm="4">
+          <CardGroup>
+            <Card className="basicCard" style={{ width: 300 }}>
+              <Image
+                className="displayImages"
+                width={200}
+                src={Nani4}
+              />
+              {/* <p>A Look into the beauty of a queen</p> */}
+              <h3 className="allH3">Nani <a href="/pages/photoAlbums/Nani"><i className="fa fa-camera cameraIcon" style={{fontSize:"26px"}}></i></a></h3>
+              
+            </Card>
+          </CardGroup>
+        </Col>
+        <Col xs="6" sm="4">
+          <Card className="basicCard" style={{ width: 300 }}>
+            <Image className="displayImages"  width={200} src={Ruth1}/>
+            {/* <p>An arrangement of Vibrant Artistry</p> */}
+            <h3 className="allH3">Ruth <a href="/pages/photoAlbums/Ruth"><i className="fa fa-camera cameraIcon" style={{fontSize:"26px"}}></i></a></h3>
+            
+          </Card>
+        </Col>
+        <Col sm="4">
+        <Col xs="6" sm="4">
+          <Card className="basicCard" style={{ width: 300 }}>
+            <Image className="displayImages" width={200} src={Aria11}/>
+            <h3 className="allH3">Aria <a href="/pages/photoAlbums/Aria"><i className="fa fa-camera cameraIcon" style={{fontSize:"26px"}}></i></a></h3>
+            
+          </Card>
+        </Col>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="6" sm="4">
+          <CardGroup>
+            <Card className="basicCard" style={{ width: 300 }}>
+              <Image
+                className="displayImages"
+                width={200}
+                src={Aijha1}
+              />
+              {/* <p>A Look into the beauty of a queen</p> */}
+              <h3 className="allH3">Aijha <a href="/pages/photoAlbums/Aijha"><i className="fa fa-camera cameraIcon" style={{fontSize:"26px"}}></i></a></h3>
+              
+            </Card>
+          </CardGroup>
+        </Col>
+      </Row>
+    </Content>
+    
+    {/* <Footer style={{ textAlign: 'center' }}>Jack of All Technologies ©2020 Created by Oseghale Okogbo</Footer> */}
+  </Layout>
+  
+);
 }
 
 export default Albums;

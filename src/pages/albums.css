@@ -1,0 +1,72 @@
+.siteTitle{
+  font-family: 'Dancing Script', cursive;
+}
+
+
+/* .siteSubTitle{
+font-family: 'Dancing Script', cursive;
+
+} */
+
+
+@import '~antd/dist/antd.css';
+.site-layout-content {
+  min-height: 28px;
+  padding: 24px;
+  background: transparent;
+}
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+.newNavMenu{
+  align-items: center;
+  
+}
+.alubumPhotos{
+  filter: grayscale(1)
+}
+
+
+.displayImages{
+  max-width: 300px;
+  max-height: 400px;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   filter: grayscale(100%);
+   transition: all 0.5s ease;
+   border: 1px solid #ddd;
+   border-radius: 18px;
+  padding: 5px;
+   /* border-image: url("../assets/MiscImages/royalBorder.png") 75 round; */
+}
+.displayImages:hover {
+  -webkit-filter: grayscale(0%);
+   -moz-filter: grayscale(0%);
+   filter: grayscale(0%);
+   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+   cursor:pointer;
+}
+.basicCard{
+  background-color: transparent;
+  border: thin;
+  border-color: violet;
+}
+.allH3{
+  font-family: 'Rokkitt', serif;
+}
+
+.cameraIcon {
+  color: grey;
+}
+.cameraIcon:hover {
+  color: aqua;
+}

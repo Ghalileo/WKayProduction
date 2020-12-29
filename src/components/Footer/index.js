@@ -11,7 +11,7 @@ const FooterPage = () => {
             <Col xs="6" sm="4">Ghalileo©2020</Col>
             <Col xs="6" sm="4">Jack Of All Technologies</Col>
             <Col sm="4">
-              Check Us Out on Social Media.<a href="https://www.instagram.com/wkayproductions/" target="_blank">
+              Check Us Out on Social Media.<a href="https://www.instagram.com/wkayproductions/" target="_blank" rel="noopener">
                 <br/>
                 <InstagramOutlined /></a>
             </Col>
